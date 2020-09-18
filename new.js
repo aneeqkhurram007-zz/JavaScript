@@ -38,3 +38,12 @@ let html = "this is a heading";
 console.log(html.substring(1, 6));
 console.log(html.includes("heading"));
 console.log(html.endsWith("headinda"));
+console.log(html.slice(0, 4));
+console.log(html.split("is"));
+let fruit = "Orange";
+let myHtml = `Hello ${name} <h1>
+This is a heading
+</h1>
+<p>You like ${fruit}</p>`;
+
+document.body.innerHTML = myHtml;
