@@ -5,7 +5,9 @@ Array.from(a).forEach(function (elements) {
         document.body.innerHTML = elements;
         console.log(`<h2>${elements}</h2>`);
     }
-})
+});
+const flname = `<h1> ${"Aneeq Khurram"} </h1>`;
+
 // element = element.className;
 // element = element.childNodes;
 // element = element.parentNode;
