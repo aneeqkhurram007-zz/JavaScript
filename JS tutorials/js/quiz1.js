@@ -7,6 +7,9 @@ Array.from(a).forEach(function (elements) {
     }
 });
 const flname = `<h1> ${"Aneeq Khurram"} </h1>`;
+string = `<h2>${string}</h2>`;
+document.body.innerHTML = string;
+
 
 // element = element.className;
 // element = element.childNodes;
