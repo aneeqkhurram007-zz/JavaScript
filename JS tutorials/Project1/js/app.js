@@ -1,5 +1,18 @@
 console.log("This is App.js");
 showNotes();
+let buttonT = document.createElement("button");
+buttonT.innerHTML = `<span style="color='blue';" class="btn btn-success" onclick="myfunc()">New Button</span>`;
+document.body.appendChild(buttonT);
+function myfunc() {
+    let doc=document.body.innerHTML;
+
+    document.body.innerHTML=buttonT;
+    window.print();
+
+window.location.assign("https://www.youtube.com");
+
+}
+
 
 let addBtn = document.getElementById('addBtn');
 addBtn.addEventListener("click", function (e) {
