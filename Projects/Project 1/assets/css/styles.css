@@ -1,0 +1,23 @@
+body {
+  width: auto;
+  height: 100vh;
+  padding: 15px;
+  background: var(--bs-gray-dark);
+  border-color: var(--bs-white);
+  border-top-color: rgb(33);
+  border-right-color: (37);
+  border-bottom-color: (41);
+  border-left-color: 37;
+}
+#outerDiv {
+  width: 450px;
+  height: 300px;
+}
+#innerDiv {
+  border-radius: 11px;
+  border-style: solid;
+  border-color: var(--bs-white);
+  height: 300px;
+  background: var(--bs-dark);
+  color: var(--bs-white);
+}
