@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <title>Untitled</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Adamina&amp;display=swap"
+    />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+
+  <body
+    class="
+      text-center
+      d-flex
+      justify-content-center
+      align-items-center align-content-center
+    "
+    style="
+      height: 100vh;
+      background: var(--bs-gray-dark);
+      font-family: Adamina, serif;
+      font-size: 16px;
+      color: var(--bs-light);
+    "
+  >
+    <div
+      class="
+        container
+        text-center
+        d-flex
+        justify-content-center
+        align-items-center align-content-center
+      "
+      style="
+        width: 75%;
+        border-style: solid;
+        border-radius: 16px;
+        padding: 25px;
+      "
+    >
+      <form
+        onsubmit="calculateTemp();return false"
+        class="text-center d-grid justify-content-center align-items-center"
+      >
+        <h1 style="font-size: 1.5em">
+          Please enter the temperature you'd like to convert.
+        </h1>
+        <input
+        id="number"
+          type="number"
+          style="
+            margin: 5px;
+            border-color: var(--bs-white);
+            border-radius: 10px;
+          "
+        /><select
+          style="
+            border-style: solid;
+            border-color: var(--bs-white);
+            border-radius: 20px;
+            margin: 5px;
+          "
+        >
+          <optgroup label="Temperature">
+            <option value="cel" selected="">Celcius</option>
+            <option value="faren">Farenheit</option>
+          </optgroup></select
+        ><input
+          class="btn btn-primary"
+          type="submit"
+          style="
+            margin: 10px;
+            border-color: rgb(255, 255, 255);
+            border-top-color: rgb(255, 255, 255);
+            border-right-color: rgb(255, 255, 255);
+            border-bottom-color: rgb(255, 255, 255);
+            border-left-color: 255;
+            border-radius: 10px;
+            background: var(--bs-dark);
+            font-size: 16px;
+            width: 150px;
+            margin-right: 10px;
+            margin-left: 10px;
+          "
+        >
+        
+        </input>
+        <p style="margin: 10px"></p>
+      </form>
+    </div>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./project4.js"></script>
+  </body>
+</html>
