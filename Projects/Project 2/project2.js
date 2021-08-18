@@ -7,7 +7,7 @@ const generateJokes = async () => {
             Accept: "application/json"
         }
     }
-    // without async programming
+    // without async programming and promises
     // fetch('https://icanhazdadjoke.com', setHeader)
     //     .then((res) => res.json()
     //     ).then((data) => jokePara.innerHTML = data.joke).catch((error) => {
