@@ -1,5 +1,15 @@
 const addButton = document.querySelector("#addButton");
+const updateLocalStorage = () => {
+  const textArea = document.querySelectorAll("textarea");
+  const notes = [];
 
+  textArea.forEach((note) => {
+    return notes.push(note.value);
+  })
+
+  localStorage.setItem("notes", JSON.stringify(notes));
+
+}
 const addNewNote = (text = '') => {
 
   const note = document.createElement('div');
@@ -62,7 +72,11 @@ display:${text ? "none" : ""}
   const divText = note.querySelector(".divText");
   const textArea = note.querySelector(".textArea");
 
-  delButton.addEventListener('click', () => note.remove())
+  delButton.addEventListener('click', () => {
+    note.remove()
+    updateLocalStorage();
+
+  })
 
   textArea.value = text;
   divText.innerHTML = text;
@@ -84,9 +98,14 @@ display:${text ? "none" : ""}
   textArea.addEventListener('change', (event) => {
     const value = event.target.value;
     divText.innerHTML = value;
+
+    updateLocalStorage();
   })
 
   document.querySelector("#noteSection").appendChild(note);
 }
-
+const notes = JSON.parse(localStorage.getItem('notes'));
+if (notes) {
+  notes.forEach((note) => addNewNote(note))
+}
 addButton.addEventListener("click", () => addNewNote())
