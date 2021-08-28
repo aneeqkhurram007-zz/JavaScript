@@ -6,142 +6,249 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
     />
-    <title>Untitled</title>
+    <title>Project 6 (Google Keep)</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Amiko&amp;display=swap"
+      href="https://fonts.googleapis.com/css?family=Allerta&amp;display=swap"
     />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Artifika&amp;display=swap"
+    />
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css" />
     <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
 
   <body
     style="
+      font-size: 1rem;
       height: 100vh;
-      padding-top: 10px;
-      font-family: Amiko, sans-serif;
-      background: var(--bs-gray-dark);
-      color: var(--bs-white);
+      border-color: rgb(33, 37, 41);
+      border-top-color: rgb(
+        33,
+        ;border-right-color: 37,
+        ;border-bottom-color: 41
+      );
+      border-left-color: 37;
+      background: var(--bs-light);
+      font-family: Artifika, serif;
     "
   >
-    <div class="container-fluid text-center">
-      <header
-        class="
-          text-center
-          d-flex
-          align-items-center
-          justify-content-xxl-start
-          align-items-xxl-center
-        "
-        style="background: var(--bs-yellow)"
-      >
-        <img
-          src="assets/img/download.png"
-          style="width: 150px; height: 100px"
-        />
-        <h1
-          class="text-center"
-          style="margin-left: 05%; color: var(--bs-secondary)"
-        >
-          Google Keep
-        </h1>
-      </header>
-    </div>
-    <div class="container" style="margin-top: 50px; height: inherit">
-      <div
-        class="
-          text-end
-          d-flex d-md-flex
-          justify-content-end
-          align-items-end align-content-end
-          justify-content-md-end
-          align-items-md-start
+    <div style="height: inherit">
+      <section
+        style="
+          background: var(--bs-warning);
+          color: var(--bs-dark);
+          padding: 5px;
         "
       >
-        <button
-          class="btn btn-primary"
-          type="button"
+        <header
           style="
-            background: var(--bs-yellow);
-            color: var(--bs-secondary);
-            border: 2px solid var(--bs-white);
-            border-radius: 10px;
+            padding: 2px;
+            text-align: left;
+            border-style: solid;
+            border-color: var(--bs-white);
           "
         >
-          Add
-        </button>
-      </div>
-      <div
-        class="
-          d-grid d-sm-grid d-md-flex
-          flex-grow-1 flex-fill
-          justify-content-center
-          align-items-center align-content-center
-          justify-content-sm-center
-          flex-md-fill
-          justify-content-md-center
-          align-items-md-start align-content-md-stretch
-        "
-        style="margin-top: 10px; height: auto; width: auto"
+          <h1 class="d-flex justify-content-start align-items-center">
+            <i class="fa fa-star" style="text-align: left; margin-right: 5%"></i
+            >Google Keep
+          </h1>
+        </header>
+      </section>
+      <section style="margin-top: 3%">
+        <div>
+          <span class="d-flex justify-content-end"
+            >Add Button<i class="fa fa-star"></i
+          ></span>
+        </div>
+      </section>
+      <section
+        class="d-grid d-md-flex justify-content-center"
+        style="margin-top: 3%; height: inherit; background: var(--bs-white)"
       >
         <div
-          class="card"
           style="
             width: 300px;
+            background: var(--bs-warning);
             height: 200px;
-            background: var(--bs-gray);
-            border-radius: 13px;
-            border: 2px solid var(--bs-white);
+            border-radius: 7px;
+            border-style: solid;
+            border-color: var(--bs-dark);
+            margin-bottom: 15%;
           "
         >
-          <div class="card-body">
-            <h4 class="card-title">Title</h4>
-            <p class="card-text">
-              Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo
-              odio, dapibus ac facilisis in, egestas eget quam. Donec id elit
-              non mi porta gravida at eget metus.
-            </p>
+          <div
+            style="
+              text-align: right;
+              background: var(--bs-warning);
+              border-style: solid;
+              border-radius: 2px;
+            "
+          >
+            <button
+              class="btn btn-primary"
+              type="button"
+              style="background: var(--bs-secondary); font-size: 11px"
+            >
+              <i class="fa fa-star"></i></button
+            ><button
+              class="btn btn-primary"
+              type="button"
+              style="background: var(--bs-gray); font-size: 10px"
+            >
+              <i class="fa fa-star"></i>
+            </button>
+          </div>
+          <div style="height: inherit">
+            <textarea
+              style="
+                width: 100%;
+                border-style: solid;
+                border-color: var(--bs-white);
+                background: var(--bs-light);
+                height: 75%;
+              "
+            ></textarea>
           </div>
         </div>
         <div
-          class="card"
           style="
             width: 300px;
+            background: var(--bs-warning);
             height: 200px;
-            background: var(--bs-gray);
-            border-radius: 13px;
-            border: 2px solid var(--bs-white);
+            margin-bottom: 15%;
+            border-radius: 7px;
+            border-style: solid;
+            border-color: var(--bs-dark);
           "
         >
-          <div class="card-body">
-            <h4 class="card-title">Title</h4>
-            <p class="card-text">
-              Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo
-              odio, dapibus ac facilisis in, egestas eget quam. Donec id elit
-              non mi porta gravida at eget metus.
-            </p>
+          <div
+            style="
+              text-align: right;
+              background: var(--bs-warning);
+              border-style: solid;
+              border-radius: 2px;
+            "
+          >
+            <button
+              class="btn btn-primary"
+              type="button"
+              style="background: var(--bs-secondary); font-size: 11px"
+            >
+              <i class="fa fa-star"></i></button
+            ><button
+              class="btn btn-primary"
+              type="button"
+              style="background: var(--bs-gray); font-size: 10px"
+            >
+              <i class="fa fa-star"></i>
+            </button>
+          </div>
+          <div style="height: inherit">
+            <textarea
+              style="
+                width: 100%;
+                border-style: solid;
+                border-color: var(--bs-white);
+                background: var(--bs-light);
+                height: 75%;
+              "
+            ></textarea>
           </div>
         </div>
         <div
-          class="card"
           style="
             width: 300px;
+            background: var(--bs-warning);
             height: 200px;
-            background: var(--bs-gray);
-            border-radius: 13px;
-            border: 2px solid var(--bs-white);
+            margin-bottom: 15%;
+            border-radius: 7px;
+            border-style: solid;
+            border-color: var(--bs-dark);
           "
         >
-          <div class="card-body">
-            <h4 class="card-title">Title</h4>
-            <p class="card-text">
-              Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo
-              odio, dapibus ac facilisis in, egestas eget quam. Donec id elit
-              non mi porta gravida at eget metus.
-            </p>
+          <div
+            style="
+              text-align: right;
+              background: var(--bs-warning);
+              border-style: solid;
+              border-radius: 2px;
+            "
+          >
+            <button
+              class="btn btn-primary"
+              type="button"
+              style="background: var(--bs-secondary); font-size: 11px"
+            >
+              <i class="fa fa-star"></i></button
+            ><button
+              class="btn btn-primary"
+              type="button"
+              style="background: var(--bs-gray); font-size: 10px"
+            >
+              <i class="fa fa-star"></i>
+            </button>
+          </div>
+          <div style="height: inherit">
+            <textarea
+              style="
+                width: 100%;
+                border-style: solid;
+                border-color: var(--bs-white);
+                background: var(--bs-light);
+                height: 75%;
+              "
+            ></textarea>
           </div>
         </div>
-      </div>
+        <div
+          style="
+            width: 300px;
+            background: var(--bs-warning);
+            height: 200px;
+            margin-bottom: 15%;
+            border-radius: 7px;
+            border-style: solid;
+            border-color: var(--bs-dark);
+          "
+        >
+          <div
+            style="
+              text-align: right;
+              background: var(--bs-warning);
+              border-style: solid;
+              border-radius: 2px;
+            "
+          >
+            <button
+              class="btn btn-primary"
+              type="button"
+              style="background: var(--bs-secondary); font-size: 11px"
+            >
+              <i class="fa fa-star"></i></button
+            ><button
+              class="btn btn-primary"
+              type="button"
+              style="background: var(--bs-gray); font-size: 10px"
+            >
+              <i class="fa fa-star"></i>
+            </button>
+          </div>
+          <div style="height: inherit">
+            <textarea
+              style="
+                width: 100%;
+                border-style: solid;
+                border-color: var(--bs-white);
+                background: var(--bs-light);
+                height: 75%;
+              "
+            ></textarea>
+          </div>
+        </div>
+      </section>
     </div>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
   </body>
