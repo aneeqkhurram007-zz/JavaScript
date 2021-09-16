@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="box">
+      <div class="wave-one"></div>
+      <div class="wave-two"></div>
+      <div class="wave-three"></div>
+      <div id="weathercon">
+        <i class="fa fa-sun" style="color: #eccc68"></i>
+      </div>
+      <div class="info">
+        <h1 class="location">
+          <i class="fas fa-street-view" style="color: #fff"></i>{%location%},
+          {%country%}
+        </h1>
+        <p id="data"></p>
+        <h1 class="temp">{%tempval%}</h1>
+        <h3 class="tempmin_max">Min {%tempmin%} | Max {%tempmax%}</h3>
+      </div>
+    </div>
+    <script>
+      const curDate = document.getElementById("data");
+      let weathercon = document.getElementById("weathercon");
+      const tempStatus = "clouds";
+      const getCurrDay = () => {
+        let currTime = new Date();
+        const weekday = Array(7);
+        weekday[0] = "Sunday";
+        weekday[1] = "Monday";
+        weekday[2] = "Tuesday";
+        weekday[3] = "Wednesday";
+        weekday[4] = "Thursday";
+        weekday[5] = "Friday";
+        weekday[6] = "Saturday";
+
+        return weekday[currTime.getDay()];
+      };
+
+      const getCurrTime = () => {
+        let now = new Date();
+        let month = now.getMonth() + 1;
+        let year = now.getFullYear();
+        let date = now.getDate();
+        let hours = now.getHours();
+        let mins = now.getMinutes();
+        let perios = "AM";
+        if (hours > 11) {
+          perios = "PM";
+          if (hours > 12) {
+            hours -= 12;
+          }
+        }
+        if (mins < 10) {
+          mins = "0" + mins;
+        }
+        return `${date}-${month}-${year} | ${hours}:${mins} ${perios}`;
+      };
+      curDate.innerHTML = getCurrDay() + " | " + getCurrTime();
+    </script>
+  </body>
+</html>
