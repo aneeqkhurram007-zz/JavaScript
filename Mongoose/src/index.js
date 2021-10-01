@@ -33,7 +33,35 @@ const createDocument = async () => {
             author: "Windows 11",
             active: true,
         })
-        const result = await playlist.save()
+        const playlist1 = new Playlist({
+            name: "Vue JS",
+            ctype: "Front-End",
+            videos: 3,
+            author: "Windows 11",
+            active: true,
+        })
+        const playlist2 = new Playlist({
+            name: "Angular JS",
+            ctype: "Front-End",
+            videos: 4,
+            author: "Windows 11",
+            active: true,
+        })
+        const playlist3 = new Playlist({
+            name: "Mongo DB",
+            ctype: "Database",
+            videos: 5,
+            author: "Windows 11",
+            active: true,
+        })
+        const playlist4 = new Playlist({
+            name: "Mongoose",
+            ctype: "Database",
+            videos: 6,
+            author: "Windows 11",
+            active: true,
+        })
+        const result = await Playlist.insertMany([playlist1, playlist2, playlist3, playlist4])
         console.log(result);
 
     } catch (error) {
