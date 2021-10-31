@@ -3,12 +3,13 @@ let direction = {
     x: 0,
     y: 0,
 };
-const foosSound = new Audio('food.mp3');
+const foodSound = new Audio('food.mp3');
 const gameOver = new Audio('gameover.mp3');
 const moveSound = new Audio('move.mp3');
 const musicSound = new Audio('music.mp3');
 let board = document.getElementById('board');
-let speed = 2;
+let Score = document.getElementById('score')
+let speed = 5;
 let lastPaintTime = 0;
 let snakeArray = [
     { x: 13, y: 15 }
@@ -26,7 +27,15 @@ function main(currentTime) {
     gameEngine();
 }
 function isCollide(snakeArray) {
-    return false;
+    // if you bump into yourself
+    for (let i = 1; i < snakeArray.length; i++) {
+        if (snakeArray[i].x === snakeArray[0].x && snakeArray[i].y === snakeArray[0].y) {
+            return true;
+        }
+    }
+    if (snakeArray[0].x >= 18 || snakeArray[0].x <= 0 || snakeArray[0].y >= 18 || snakeArray[0].y <= 0) {
+        return true;
+    }
 }
 function gameEngine() {
     // Part 1: Updating the snake variable (Array)
@@ -40,6 +49,22 @@ function gameEngine() {
         score = 0;
 
     }
+    // If you have eaten the food, Increment the score and regenerate food
+    if (snakeArray[0].y === food.y && snakeArray[0].x === food.x) {
+        foodSound.play();
+        score += 1;
+        Score.innerHTML = `Score : ${score}`;
+        snakeArray.unshift({ x: snakeArray[0].x + inputDirection.x, y: snakeArray[0].y + inputDirection.y })
+        let a = 2;
+        let b = 16;
+        food = { x: Math.round(a + (b - a) * Math.random()), y: Math.round(a + (b - a) * Math.random()) }
+    }
+    // Moving the snake
+    for (let i = snakeArray.length - 2; i >= 0; i--) {
+        snakeArray[i + 1] = { ...snakeArray[i] };
+    }
+    snakeArray[0].x += inputDirection.x;
+    snakeArray[0].y += inputDirection.y;
     // Part 2: Render the snake and food
     // Display the Snake
     board.innerHTML = "";
@@ -77,24 +102,20 @@ window.addEventListener('keydown', e => {
     moveSound.play();
     switch (e.key) {
         case 'ArrowUp':
-            console.log("ArrowUp");
             inputDirection.x = 0;
             inputDirection.y = -1;
             break;
         case 'ArrowDown':
-            console.log("ArrowDown");
             inputDirection.x = 0;
             inputDirection.y = 1;
 
             break;
         case 'ArrowLeft':
-            console.log("ArrowLeft");
             inputDirection.x = -1;
             inputDirection.y = 0;
 
             break;
         case 'ArrowRight':
-            console.log("ArrowRight");
             inputDirection.x = 1;
             inputDirection.y = 0;
 
@@ -102,4 +123,5 @@ window.addEventListener('keydown', e => {
         default:
             break;
     }
+    console.log(snakeArray[0])
 })
